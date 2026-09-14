@@ -1,5 +1,6 @@
-# MBAFAM — Farewell
+# MBA Farewell — Our Story
 
-Static HTML/CSS/JavaScript MBA farewell website. No Node, npm, GSAP, or Jekyll build is required.
+A pure static HTML/CSS/JavaScript interactive farewell website. No npm, GSAP, Jekyll or build step is required.
 
-GitHub Pages: use `master` branch and `/ (root)`.
+## GitHub Pages
+Keep these files directly in the repository root and use the `master` branch as the Pages source.

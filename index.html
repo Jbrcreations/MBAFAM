@@ -2,104 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#090b1a">
-  <meta name="description" content="69 friends. Different teams. One unforgettable MBA journey.">
-  <title>MBA Farewell — 69 Friends • One Journey</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080817">
+  <meta name="description" content="An interactive MBA farewell memory experience.">
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="style/style.css">
+  <title>MBA Farewell — Our Story</title>
 </head>
 <body>
-  <div id="loading" class="loading"><div class="loader"></div><p>Opening our MBA memories…</p></div>
-  <div class="stars" aria-hidden="true"></div>
-  <div class="confetti" aria-hidden="true"></div>
-  <main class="page">
-    <section class="hero section" id="top">
+  <div class="loader" id="loader"><div class="loader-ring"></div><p>Opening our memory book…</p></div>
+  <div class="stars"></div>
+  <div class="butterflies" aria-hidden="true">
+    <span class="butterfly b1">🦋</span><span class="butterfly b2">🦋</span><span class="butterfly b3">🦋</span><span class="butterfly b4">🦋</span>
+  </div>
+  <div class="progress"><span id="progressBar"></span></div>
+
+  <main id="experience">
+    <section class="slide active hero" data-slide="0">
       <div class="hero-glow"></div>
-      <div class="badge" data-text="eyebrow"></div>
-      <p class="mini">To the people who made these years unforgettable</p>
-      <h1 data-text="heroTitle"></h1>
-      <p class="hero-sub" data-text="heroSubtitle"></p>
-      <button class="primary-btn begin" type="button">Begin our journey <span>↓</span></button>
-      <div class="scroll-note">SCROLL • REMEMBER • SMILE</div>
+      <div class="graduation-art" aria-hidden="true">
+        <div class="cap"><div class="cap-top"></div><div class="cap-band"></div><div class="tassel"></div></div>
+        <div class="diploma"><span>MASTER OF</span><strong>MEMORIES</strong></div>
+      </div>
+      <div class="kicker">MBA FAREWELL • OUR FINAL CHAPTER</div>
+      <h1>Our MBA<br><em>Story</em></h1>
+      <p class="lead">Some chapters end quietly.<br><strong>Ours deserves a standing ovation.</strong></p>
+      <button class="primary next" type="button">Enter Our Story <span>→</span></button>
+      <p class="swipe">Tap the button • turn the page • relive the journey</p>
     </section>
 
-    <section class="section message-section">
-      <span class="section-number">01</span>
-      <div class="glass-card message-card reveal">
-        <span class="label">A MESSAGE TO MY MBA FAMILY</span>
-        <h2>Before we say goodbye…</h2>
-        <p data-text="openingMessage"></p>
-        <div class="signature">— With love, from one of the 69 ❤️</div>
+    <section class="slide" data-slide="1">
+      <div class="chapter">01 / THE BEGINNING</div>
+      <div class="split">
+        <div>
+          <p class="eyebrow">BEFORE THE GOODBYES</p>
+          <h2>We came for a degree.<br><em>We found a family.</em></h2>
+          <p>Between lectures, presentations, deadlines and those “one more minute” conversations, something unexpected happened — ordinary days became memories worth keeping forever.</p>
+          <div class="quote">“The best part of this journey was never the classroom. It was who was sitting beside us.”</div>
+        </div>
+        <div class="memory-card card-tilt"><span>MEMORY<br>LOADED</span><div class="sparkle">✦</div></div>
       </div>
+      <button class="primary next">Turn the page <span>→</span></button>
     </section>
 
-    <section class="section journey-section">
-      <span class="section-number">02</span>
-      <div class="journey-content reveal">
-        <span class="label">OUR JOURNEY</span>
-        <h2 data-text="journeyTitle"></h2>
-        <div class="number-69">69</div>
-        <p class="big-line" data-text="teamMessage"></p>
-      </div>
-    </section>
-
-    <section class="section unity-section">
-      <span class="section-number">03</span>
-      <div class="unity-orbit" aria-hidden="true">
-        <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span>
-      </div>
-      <div class="unity-content reveal">
-        <span class="label">THE MOMENT THAT DEFINED US</span>
-        <p class="unity-message" data-text="unityMessage"></p>
-        <div class="unity-title" data-text="unityTitle"></div>
-        <div class="unity-symbol">69 <b>→</b> 1</div>
-      </div>
-    </section>
-
-    <section class="section memory-section">
-      <span class="section-number">04</span>
+    <section class="slide" data-slide="2">
+      <div class="chapter">02 / CLASSROOM DIARIES</div>
+      <p class="eyebrow">THE LITTLE THINGS</p>
+      <h2>Not every memory<br><em>needed a photograph.</em></h2>
       <div class="memory-grid">
-        <div class="photo-frame reveal">
-          <img id="memoryPhoto" src="img/IMG-20260914-WA0016.jpg" alt="MBA class memory">
-        </div>
-        <div class="memory-copy reveal">
-          <span class="label">CLASS • IV • MEMORIES</span>
-          <h2>The little moments became the big memories.</h2>
-          <p data-text="memoryMessage"></p>
-          <div class="memory-tags"><span>CLASS MOMENTS</span><span>IV DAYS</span><span>FRIENDSHIP</span><span>MEMORIES</span></div>
-        </div>
+        <article><b>☕</b><h3>Between classes</h3><p>Those quick conversations that somehow lasted longer than the lecture.</p></article>
+        <article><b>⌁</b><h3>Last-minute plans</h3><p>The plans that were never really plans — and became the stories we still talk about.</p></article>
+        <article><b>✦</b><h3>Presentation days</h3><p>Pressure, teamwork, laughter and the relief after the final slide.</p></article>
+        <article><b>∞</b><h3>Inside jokes</h3><p>Words that made no sense to anyone else but meant everything to us.</p></article>
       </div>
+      <button class="primary next">Keep the memories going <span>→</span></button>
     </section>
 
-    <section class="section future-section">
-      <span class="section-number">05</span>
-      <div class="future-card reveal">
-        <span class="label">WHAT COMES NEXT</span>
-        <h2>Go make your future extraordinary. ✨</h2>
-        <p data-text="futureMessage"></p>
-        <p class="future-sub" data-text="futureSub"></p>
-        <div class="future-pills"><span>SUCCESS</span><span>HAPPINESS</span><span>GROWTH</span><span>BIG DREAMS</span></div>
+    <section class="slide" data-slide="3">
+      <div class="chapter">03 / IV DIARIES</div>
+      <div class="iv-scene">
+        <div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div>
+        <div class="road"></div><div class="polaroid p1">IV<br><small>ADVENTURE</small></div><div class="polaroid p2">LAUGH<br><small>REPEAT</small></div>
       </div>
+      <div class="scene-copy"><p class="eyebrow">THE DAYS WE LEFT CAMPUS</p><h2>Somewhere between<br><em>here and everywhere…</em></h2><p>IV days, shared rides, random photos, food stops, tired faces and uncontrollable laughter. We didn't know then how much we'd miss the simplest parts.</p></div>
+      <button class="primary next">Open the next memory <span>→</span></button>
     </section>
 
-    <section class="section final-section">
-      <div class="final-glow"></div>
-      <div class="final-card reveal">
-        <div class="graduation-cap">🎓</div>
-        <span class="label">ONE LAST THOUGHT</span>
-        <h2>69 people.<br><em>One heart.</em></h2>
-        <p class="final-thought" data-text="finalThought"></p>
-        <div class="divider"></div>
-        <p class="final-goodbye" data-text="finalGoodbye"></p>
-        <div class="heart-row">❤️ &nbsp; 🤝 &nbsp; 🎓 &nbsp; ✨</div>
-        <button id="replay" class="secondary-btn" type="button" data-text="replayText"></button>
-      </div>
-      <p class="footer" data-text="footer"></p>
+    <section class="slide" data-slide="4">
+      <div class="chapter">04 / WHEN IT MATTERED</div>
+      <div class="unity-orbit"><div class="orbit-ring r1"></div><div class="orbit-ring r2"></div><div class="core">ONE<br><small>TEAM</small></div><span class="orbit-dot d1">♥</span><span class="orbit-dot d2">✦</span><span class="orbit-dot d3">∞</span></div>
+      <div class="center-copy"><p class="eyebrow">THE PART WE SHOULD NEVER FORGET</p><h2>Different people.<br><em>One heartbeat.</em></h2><p>Different teams, personalities and dreams — but when someone needed help, we showed up. That quiet unity is one of the most beautiful things our MBA gave us.</p></div>
+      <button class="primary next">Remember this feeling <span>→</span></button>
+    </section>
+
+    <section class="slide" data-slide="5">
+      <div class="chapter">05 / ONE LAST LOOK</div>
+      <p class="eyebrow">A REAL MEMORY</p>
+      <h2>This photo will stay<br><em>where words can't.</em></h2>
+      <div class="photo-frame"><img src="img/IMG-20260914-WA0016.jpg" alt="MBA classmates memory"><div class="photo-shine"></div></div>
+      <p class="caption">One frame. A thousand stories.</p>
+      <button class="primary next">See what comes next <span>→</span></button>
+    </section>
+
+    <section class="slide future" data-slide="6">
+      <div class="future-stars"></div>
+      <div class="chapter">06 / THE NEXT CHAPTER</div>
+      <div class="graduation-art small" aria-hidden="true"><div class="cap"><div class="cap-top"></div><div class="cap-band"></div><div class="tassel"></div></div></div>
+      <p class="eyebrow">THE WORLD IS WAITING</p>
+      <h2>Go build the life<br><em>you imagined.</em></h2>
+      <p class="future-text">May every dream find its way to you. May your work make you proud, your people make you happy, and your future be bigger than the plans you made in college.</p>
+      <div class="wish-row"><span>SUCCESS</span><span>HAPPINESS</span><span>GROWTH</span><span>COURAGE</span></div>
+      <button class="primary next">One final page <span>→</span></button>
+    </section>
+
+    <section class="slide finale" data-slide="7">
+      <div class="confetti-field"></div>
+      <div class="kicker">THE LAST PAGE</div>
+      <h2>Goodbye is not<br><em>the end.</em></h2>
+      <p class="final-thought">“Different paths. Different dreams. Different destinations. But this chapter will always belong to all of us.”</p>
+      <p class="goodbye">Thank you for every laugh, every challenge, every adventure and every ordinary moment that became extraordinary because we shared it.</p>
+      <div class="signature">With love,<br><strong>Your MBA family</strong> ♥</div>
+      <button class="primary replay" type="button">↻ Relive the journey</button>
     </section>
   </main>
-  <div class="progress"><span id="progressBar"></span></div>
-  <button id="topBtn" class="top-btn" type="button" aria-label="Back to top">↑</button>
+
+  <nav class="page-nav" aria-label="Story navigation">
+    <button id="prev" aria-label="Previous page">←</button>
+    <div id="dots"></div>
+    <button id="next" aria-label="Next page">→</button>
+  </nav>
+  <button class="sound-hint" id="topBtn" type="button" aria-label="Back to top">↑</button>
   <script src="script/main.js"></script>
 </body>
 </html>
