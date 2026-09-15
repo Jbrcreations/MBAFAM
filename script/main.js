@@ -5,6 +5,7 @@
   const next = document.getElementById('next');
   const loader = document.getElementById('loader');
   const progress = document.getElementById('progressBar');
+  const swarmField = document.getElementById('swarm');
   let current = 0;
   let locked = false;
 
@@ -24,18 +25,39 @@
     progress.style.width = `${((current + 1) / slides.length) * 100}%`;
   }
 
+  // ---- the butterfly-swarm page transition ----
+  function butterflySwarm() {
+    const count = 9;
+    for (let i = 0; i < count; i++) {
+      const b = document.createElement('span');
+      b.className = 'swarm-b';
+      b.textContent = '🦋';
+      const sy = 10 + Math.random() * 80; // vh
+      const size = 16 + Math.random() * 16;
+      const delay = (i * 0.045) + Math.random() * 0.05;
+      b.style.setProperty('--sy', `${sy}vh`);
+      b.style.fontSize = `${size}px`;
+      b.style.animationDelay = `${delay}s`;
+      swarmField.appendChild(b);
+      setTimeout(() => b.remove(), 1500);
+    }
+  }
+
   function go(index) {
     if (locked) return;
     const target = Math.max(0, Math.min(slides.length - 1, index));
     if (target === current) return;
     locked = true;
+    butterflySwarm();
     slides[current].classList.add('leaving');
-    current = target;
-    update();
+    setTimeout(() => {
+      current = target;
+      update();
+    }, 360);
     setTimeout(() => {
       slides.forEach(s => s.classList.remove('leaving'));
       locked = false;
-    }, 650);
+    }, 780);
   }
 
   prev.addEventListener('click', () => go(current - 1));
@@ -68,6 +90,45 @@
       setTimeout(() => s.remove(), 2300);
     }
   }
+
+  // ---- ambient magical dressing: twinkling stars + drifting fireflies ----
+  function seedTwinkles() {
+    const field = document.getElementById('twinkles');
+    if (!field) return;
+    const n = 26;
+    for (let i = 0; i < n; i++) {
+      const t = document.createElement('span');
+      t.className = 'twinkle';
+      const size = 1 + Math.random() * 2;
+      t.style.width = `${size}px`;
+      t.style.height = `${size}px`;
+      t.style.left = `${Math.random() * 100}%`;
+      t.style.top = `${Math.random() * 100}%`;
+      t.style.animationDelay = `${Math.random() * 4}s`;
+      t.style.animationDuration = `${2.6 + Math.random() * 3}s`;
+      field.appendChild(t);
+    }
+  }
+
+  function seedFireflies() {
+    const field = document.getElementById('fireflies');
+    if (!field) return;
+    const n = 14;
+    for (let i = 0; i < n; i++) {
+      const f = document.createElement('span');
+      f.className = 'firefly';
+      f.style.left = `${Math.random() * 100}%`;
+      f.style.top = `${40 + Math.random() * 55}%`;
+      f.style.setProperty('--fx', `${(Math.random() * 16 - 8)}vw`);
+      f.style.setProperty('--fy', `${(10 + Math.random() * 18)}vh`);
+      f.style.animationDuration = `${7 + Math.random() * 9}s`;
+      f.style.animationDelay = `${Math.random() * 8}s`;
+      field.appendChild(f);
+    }
+  }
+
+  seedTwinkles();
+  seedFireflies();
 
   window.addEventListener('load', () => {
     setTimeout(() => loader.classList.add('hide'), 550);
