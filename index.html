@@ -3,22 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#080817">
-  <meta name="description" content="An interactive MBA farewell memory experience.">
+  <meta name="theme-color" content="#0a0518">
+  <meta name="description" content="An interactive MBA farewell memory experience — a magical fantasy storybook.">
   <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">
-  <title>MBA Farewell — Our Story</title>
+  <title>PA College of MBA — 4PA 24BA · Our Story</title>
 </head>
 <body>
   <div class="loader" id="loader"><div class="loader-ring"></div><p>Opening our memory book…</p></div>
-  <div class="stars"></div>
+
+  <!-- Ambient magical backdrop, present behind every page -->
+  <div class="realm" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="twinkles" id="twinkles"></div>
+    <div class="moon"><span class="moon-glow"></span><span class="crater c1"></span><span class="crater c2"></span><span class="crater c3"></span></div>
+    <div class="clouds" id="clouds">
+      <svg class="cloud c1" viewBox="0 0 200 90"><path d="M35 70c-19 0-30-14-27-29 3-13 16-20 28-17 4-15 20-24 35-20 13 3 21 14 21 25 15-3 28 6 29 19 1 14-12 22-26 22z"/></svg>
+      <svg class="cloud c2" viewBox="0 0 200 90"><path d="M35 70c-19 0-30-14-27-29 3-13 16-20 28-17 4-15 20-24 35-20 13 3 21 14 21 25 15-3 28 6 29 19 1 14-12 22-26 22z"/></svg>
+      <svg class="cloud c3" viewBox="0 0 200 90"><path d="M35 70c-19 0-30-14-27-29 3-13 16-20 28-17 4-15 20-24 35-20 13 3 21 14 21 25 15-3 28 6 29 19 1 14-12 22-26 22z"/></svg>
+      <svg class="cloud c4" viewBox="0 0 200 90"><path d="M35 70c-19 0-30-14-27-29 3-13 16-20 28-17 4-15 20-24 35-20 13 3 21 14 21 25 15-3 28 6 29 19 1 14-12 22-26 22z"/></svg>
+    </div>
+    <div class="fireflies" id="fireflies"></div>
+  </div>
+
   <div class="butterflies" aria-hidden="true">
     <span class="butterfly b1">🦋</span><span class="butterfly b2">🦋</span><span class="butterfly b3">🦋</span><span class="butterfly b4">🦋</span>
   </div>
+  <div class="swarm" id="swarm" aria-hidden="true"></div>
+
   <div class="progress"><span id="progressBar"></span></div>
 
   <main id="experience">
-    <section class="slide active hero" data-slide="0">
+
+    <section class="slide active cover" data-slide="0">
+      <div class="cover-glow"></div>
+      <div class="crest">
+        <svg viewBox="0 0 220 220" class="crest-ring" aria-hidden="true">
+          <circle cx="110" cy="110" r="98"/>
+          <circle cx="110" cy="110" r="86"/>
+        </svg>
+        <span class="crest-icon">🦋</span>
+      </div>
+      <div class="cover-kicker">A magical chapter is about to unfold</div>
+      <h1 class="cover-title">PA College<br><em>of MBA</em></h1>
+      <div class="batch-tag"><span>4PA</span><i>•</i><span>24BA</span></div>
+      <p class="cover-lead">Before the memories, before the goodbyes —<br>one last story, written by all of us.</p>
+      <button class="primary magic-btn next" type="button">
+        <span class="btn-butterfly">🦋</span>
+        <span class="btn-label">Yes, Continue</span>
+        <span class="btn-check">✅</span>
+      </button>
+      <p class="swipe">Tap to begin • the story remembers you</p>
+    </section>
+
+    <section class="slide hero" data-slide="1">
       <div class="hero-glow"></div>
       <div class="graduation-art" aria-hidden="true">
         <div class="cap"><div class="cap-top"></div><div class="cap-band"></div><div class="tassel"></div></div>
@@ -27,25 +68,25 @@
       <div class="kicker">MBA FAREWELL • OUR FINAL CHAPTER</div>
       <h1>Our MBA<br><em>Story</em></h1>
       <p class="lead">Some chapters end quietly.<br><strong>Ours deserves a standing ovation.</strong></p>
-      <button class="primary next" type="button">Enter Our Story <span>→</span></button>
+      <button class="primary magic-btn next" type="button"><span class="btn-butterfly">🦋</span><span class="btn-label">Enter Our Story</span><span>→</span></button>
       <p class="swipe">Tap the button • turn the page • relive the journey</p>
     </section>
 
-    <section class="slide" data-slide="1">
+    <section class="slide" data-slide="2">
       <div class="chapter">01 / THE BEGINNING</div>
       <div class="split">
         <div>
           <p class="eyebrow">BEFORE THE GOODBYES</p>
           <h2>We came for a degree.<br><em>We found a family.</em></h2>
-          <p>Between lectures, presentations, deadlines and those “one more minute” conversations, something unexpected happened — ordinary days became memories worth keeping forever.</p>
-          <div class="quote">“The best part of this journey was never the classroom. It was who was sitting beside us.”</div>
+          <p>Between lectures, presentations, deadlines and those "one more minute" conversations, something unexpected happened — ordinary days became memories worth keeping forever.</p>
+          <div class="quote">"The best part of this journey was never the classroom. It was who was sitting beside us."</div>
         </div>
         <div class="memory-card card-tilt"><span>MEMORY<br>LOADED</span><div class="sparkle">✦</div></div>
       </div>
-      <button class="primary next">Turn the page <span>→</span></button>
+      <button class="primary magic-btn next"><span class="btn-butterfly">🦋</span><span class="btn-label">Turn the page</span><span>→</span></button>
     </section>
 
-    <section class="slide" data-slide="2">
+    <section class="slide" data-slide="3">
       <div class="chapter">02 / CLASSROOM DIARIES</div>
       <p class="eyebrow">THE LITTLE THINGS</p>
       <h2>Not every memory<br><em>needed a photograph.</em></h2>
@@ -55,36 +96,45 @@
         <article><b>✦</b><h3>Presentation days</h3><p>Pressure, teamwork, laughter and the relief after the final slide.</p></article>
         <article><b>∞</b><h3>Inside jokes</h3><p>Words that made no sense to anyone else but meant everything to us.</p></article>
       </div>
-      <button class="primary next">Keep the memories going <span>→</span></button>
+      <button class="primary magic-btn next"><span class="btn-butterfly">🦋</span><span class="btn-label">Keep the memories going</span><span>→</span></button>
     </section>
 
-    <section class="slide" data-slide="3">
+    <section class="slide" data-slide="4">
       <div class="chapter">03 / IV DIARIES</div>
       <div class="iv-scene">
         <div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div>
         <div class="road"></div><div class="polaroid p1">IV<br><small>ADVENTURE</small></div><div class="polaroid p2">LAUGH<br><small>REPEAT</small></div>
       </div>
       <div class="scene-copy"><p class="eyebrow">THE DAYS WE LEFT CAMPUS</p><h2>Somewhere between<br><em>here and everywhere…</em></h2><p>IV days, shared rides, random photos, food stops, tired faces and uncontrollable laughter. We didn't know then how much we'd miss the simplest parts.</p></div>
-      <button class="primary next">Open the next memory <span>→</span></button>
+      <button class="primary magic-btn next"><span class="btn-butterfly">🦋</span><span class="btn-label">Open the next memory</span><span>→</span></button>
     </section>
 
-    <section class="slide" data-slide="4">
-      <div class="chapter">04 / WHEN IT MATTERED</div>
-      <div class="unity-orbit"><div class="orbit-ring r1"></div><div class="orbit-ring r2"></div><div class="core">ONE<br><small>TEAM</small></div><span class="orbit-dot d1">♥</span><span class="orbit-dot d2">✦</span><span class="orbit-dot d3">∞</span></div>
-      <div class="center-copy"><p class="eyebrow">THE PART WE SHOULD NEVER FORGET</p><h2>Different people.<br><em>One heartbeat.</em></h2><p>Different teams, personalities and dreams — but when someone needed help, we showed up. That quiet unity is one of the most beautiful things our MBA gave us.</p></div>
-      <button class="primary next">Remember this feeling <span>→</span></button>
+    <section class="slide unity" data-slide="5">
+      <div class="chapter">04 / ONE FAMILY, FOUR GROUPS</div>
+      <div class="unity-orbit">
+        <div class="orbit-ring r1"></div><div class="orbit-ring r2"></div>
+        <div class="core">ONE<br><small>FAMILY</small></div>
+        <span class="orbit-dot d1">A</span><span class="orbit-dot d2">B</span><span class="orbit-dot d3">C</span><span class="orbit-dot d4">D</span>
+      </div>
+      <div class="center-copy">
+        <p class="eyebrow">THE PART WE SHOULD NEVER FORGET</p>
+        <h2>Different groups.<br><em>One heartbeat.</em></h2>
+        <p>We were placed into different groups — A, B, C and D — each with our own projects, deadlines and rivalries. It would have been easy to stay inside those lines. But the moment a classmate faced a real problem, the group labels quietly disappeared.</p>
+        <div class="quote">"We stopped being Group A, B, C or D, and simply became classmates helping classmates. In solving each other's problems, we proved that no group divides us — we are, and always will be, equal as one MBA family."</div>
+      </div>
+      <button class="primary magic-btn next"><span class="btn-butterfly">🦋</span><span class="btn-label">Remember this feeling</span><span>→</span></button>
     </section>
 
-    <section class="slide" data-slide="5">
+    <section class="slide" data-slide="6">
       <div class="chapter">05 / ONE LAST LOOK</div>
       <p class="eyebrow">A REAL MEMORY</p>
       <h2>This photo will stay<br><em>where words can't.</em></h2>
       <div class="photo-frame"><img src="img/IMG-20260914-WA0016.jpg" alt="MBA classmates memory"><div class="photo-shine"></div></div>
       <p class="caption">One frame. A thousand stories.</p>
-      <button class="primary next">See what comes next <span>→</span></button>
+      <button class="primary magic-btn next"><span class="btn-butterfly">🦋</span><span class="btn-label">See what comes next</span><span>→</span></button>
     </section>
 
-    <section class="slide future" data-slide="6">
+    <section class="slide future" data-slide="7">
       <div class="future-stars"></div>
       <div class="chapter">06 / THE NEXT CHAPTER</div>
       <div class="graduation-art small" aria-hidden="true"><div class="cap"><div class="cap-top"></div><div class="cap-band"></div><div class="tassel"></div></div></div>
@@ -92,18 +142,19 @@
       <h2>Go build the life<br><em>you imagined.</em></h2>
       <p class="future-text">May every dream find its way to you. May your work make you proud, your people make you happy, and your future be bigger than the plans you made in college.</p>
       <div class="wish-row"><span>SUCCESS</span><span>HAPPINESS</span><span>GROWTH</span><span>COURAGE</span></div>
-      <button class="primary next">One final page <span>→</span></button>
+      <button class="primary magic-btn next"><span class="btn-butterfly">🦋</span><span class="btn-label">One final page</span><span>→</span></button>
     </section>
 
-    <section class="slide finale" data-slide="7">
+    <section class="slide finale" data-slide="8">
       <div class="confetti-field"></div>
       <div class="kicker">THE LAST PAGE</div>
       <h2>Goodbye is not<br><em>the end.</em></h2>
-      <p class="final-thought">“Different paths. Different dreams. Different destinations. But this chapter will always belong to all of us.”</p>
+      <p class="final-thought">"Different groups. Different paths. Different dreams. But this chapter will always belong to all of us, equally."</p>
       <p class="goodbye">Thank you for every laugh, every challenge, every adventure and every ordinary moment that became extraordinary because we shared it.</p>
-      <div class="signature">With love,<br><strong>Your MBA family</strong> ♥</div>
-      <button class="primary replay" type="button">↻ Relive the journey</button>
+      <div class="signature">With love,<br><strong>Your MBA family — 4PA 24BA</strong> ♥</div>
+      <button class="primary magic-btn replay" type="button"><span class="btn-butterfly">🦋</span><span class="btn-label">Relive the journey</span><span>↻</span></button>
     </section>
+
   </main>
 
   <nav class="page-nav" aria-label="Story navigation">
